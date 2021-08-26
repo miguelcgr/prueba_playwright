@@ -2,11 +2,13 @@ const playwright = require("playwright");
 
 (async () => {
   const browser = await playwright["chromium"].launch({
-    headless: false,
+    headless: false, //
     slowMo: 50,
   });
 
+
   const context = await browser.newContext();
+
 
   const page = await context.newPage();
 
@@ -20,3 +22,4 @@ const playwright = require("playwright");
 
   popup.click("#cerca-button");
 })();
+
